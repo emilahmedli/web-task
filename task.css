@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+}
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    width: 300px;
+    min-height: 500px;
+    background-color: #333;
+    padding: 20px;
+    color: #fff;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+.separator {
+    border: none;
+    border-top: 1px solid #1b5aee;
+    margin: 15px 0;
+    opacity: 0.5;
+}
+
+
+.display {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: #333;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+#input {
+    font-size: 20px;
+    color: #fff;
+}
+
+#result {
+    font-size: 32px;
+    color: #fff;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
+
+.input-small {
+    font-size: 14px;
+    color: #bbb;
+    transition: font-size 0.3s ease;
+}
+
+.result-large {
+    font-size: 40px;
+    color: #fff;
+    transition: font-size 0.3s ease;
+}
+
+
+button {
+    width: 55px;
+    height: 55px;
+    font-size: 16px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+button:nth-child(-n+4):nth-child(-n+9) {
+    background-color: #1b5aee;
+    color: #fff;
+}
+button:last-child {
+    background-color: #1b5aee;
+    color: #fff;
+}
+
+.buttons button:nth-last-child(2),
+.buttons button:nth-last-child(5),
+.buttons button:nth-last-child(9),
+.buttons button:nth-last-child(13) {
+    background-color: #1b5aee;
+    color: #fff;
+}
+#input.input-small {
+    font-size: 14px;
+    opacity: 0.7; 
+}
+
+#result.result-large {
+    font-size: 32px;
+    color: #1b5aee;
+    transition: font-size 0.5s ease, color 0.5s ease;
+}
+
